@@ -1,8 +1,12 @@
-# 🚀 CodeSnip - AI-Powered Code Snippet Manager
+# CodeSnip - AI-Powered Code Snippet Manager
 
 A modern, full-stack web application for developers to save, organize, and search their code snippets with AI-powered auto-tagging.
 
-![CodeSnip Banner](https://via.placeholder.com/1200x400/4F46E5/ffffff?text=CodeSnip+-+Your+Personal+Code+Library)
+
+## 📖 About
+
+**CodeSnip** was born out of a personal need - as a developer, I constantly found myself searching through old projects, Stack Overflow answers, and scattered notes trying to find that one piece of code I wrote months ago. I wanted a clean, fast, and intuitive way to save and organize code snippets with powerful search capabilities.
+Built during my transition from college to the professional world, this project showcases modern full-stack development practices and my passion for creating tools that developers actually want to use.
 
 ## ✨ Features
 
@@ -23,7 +27,7 @@ A modern, full-stack web application for developers to save, organize, and searc
 - ⚡ **Quick Actions** - Keyboard shortcuts for power users
 - 🔒 **Secure Authentication** - JWT-based auth with bcrypt password hashing
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - **React 18** - Modern UI library with hooks
@@ -41,25 +45,25 @@ A modern, full-stack web application for developers to save, organize, and searc
 - **Prisma** - Modern ORM
 - **JWT** - Authentication tokens
 - **bcryptjs** - Password hashing
-- **OpenAI API** - AI-powered features
+- **OpenAI API** - AI-powered features *(optional)*
 - **express-rate-limit** - API rate limiting
 
-### DevOps & Deployment
-- **Vercel** - Frontend hosting
-- **Render** - Backend hosting
-- **Neon** - Serverless PostgreSQL
-- **GitHub Actions** - CI/CD (optional)
+### DevOps & Tools
+- **Git** - Version control
+- **npm** - Package management
+- **Nodemon** - Auto-restart development server
+- **Prisma Studio** - Database GUI
 
-## 📋 Prerequisites
+## Prerequisites
 
 Before you begin, ensure you have the following installed:
 - **Node.js** (v18 or higher)
-- **npm** or **yarn**
+- **npm**
 - **PostgreSQL** (v14 or higher) - or use Neon for cloud database
 - **Git**
 - **OpenAI API Key** (for AI features - optional)
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Clone the Repository
 ```bash
@@ -112,7 +116,33 @@ npm start
 ```
 Frontend will run on `http://localhost:3000`
 
-## 📁 Project Structure
+
+## Usage
+
+### Creating Your First Snippet
+
+1. **Register an account** or **Login** if you already have one
+2. Click **"New Snippet"** button
+3. Fill in the details:   
+   - **Title:** Name your snippet   
+   - **Language** Select from 25+ languages   
+   - **Code:** Paste or write your code (Monaco Editor)   
+   - **Description:** Briefly describe what it does   
+   - **Tags:** Add tags for organization (e.g., `algorithm`, `react`, `api`)
+4. Click **"Create"** 
+5. Your snippet appears in the dashboard!
+
+### Searching & Filtering
+
+- Use the **search bar** to find snippets by title, description, or code
+- **Filter by language** using the dropdown
+- Click on any snippet to view, edit, or delete
+
+### Dark Mode
+
+Click the **🌙 moon icon** in the navbar to toggle dark mode. Your preference is saved automatically!
+
+## Project Structure
 
 ```
 codesnip/
@@ -180,7 +210,7 @@ codesnip/
 └── README.md
 ```
 
-## 🔑 API Endpoints
+## API Endpoints
 
 ### Authentication
 - `POST /api/auth/register` - Register new user
@@ -199,57 +229,24 @@ codesnip/
 - `POST /api/ai/auto-tag` - Get AI-suggested tags and description
 - `POST /api/ai/smart-search` - AI-powered semantic search
 
-## 🎨 Screenshots
 
-### Dashboard
-![Dashboard](https://via.placeholder.com/800x500/4F46E5/ffffff?text=Dashboard+View)
+## Roadmap
 
-### Code Editor
-![Editor](https://via.placeholder.com/800x500/10B981/ffffff?text=Code+Editor)
+### ✅ Completed Features
 
-### Search & Filter
-![Search](https://via.placeholder.com/800x500/F59E0B/ffffff?text=Search+%26+Filter)
+- [x] User authentication (register/login)
+- [x] CRUD operations for snippets
+- [x] Monaco code editor integration
+- [x] Search and filter functionality
+- [x] Tag-based organization
+- [x] Dark/Light mode
+- [x] Responsive design
+- [x] AI auto-tagging (optional)
 
-## 🚢 Deployment Guide
+### 🚧 In Progress
 
-### Deploy Backend to Render
-
-1. Create account on [Render](https://render.com)
-2. Create new "Web Service"
-3. Connect your GitHub repository
-4. Configure:
-   - Build Command: `cd backend && npm install && npx prisma generate`
-   - Start Command: `cd backend && npm start`
-5. Add environment variables
-6. Deploy!
-
-### Deploy Frontend to Vercel
-
-1. Install Vercel CLI: `npm i -g vercel`
-2. From frontend folder: `vercel`
-3. Follow prompts
-4. Set environment variable: `REACT_APP_API_URL`
-
-### Database on Neon
-
-1. Create account on [Neon](https://neon.tech)
-2. Create new project
-3. Copy connection string
-4. Update `DATABASE_URL` in backend `.env`
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Commit changes: `git commit -m 'Add amazing feature'`
-4. Push to branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- [ ] Deployment to production (Vercel + Render + Neon)
+- [ ] Custom domain setup
 
 ## 👨‍💻 Author
 
@@ -258,20 +255,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - LinkedIn: [shresthajaiswal](https://linkedin.com/in/shresthajaiswal)
 - Email: jaiswallshresthaa@gmail.com
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [Monaco Editor](https://microsoft.github.io/monaco-editor/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [OpenAI](https://openai.com/)
 - [Prisma](https://www.prisma.io/)
 
-## 📊 Project Stats
-
-![GitHub Stars](https://img.shields.io/github/stars/yourusername/codesnip?style=social)
-![GitHub Forks](https://img.shields.io/github/forks/yourusername/codesnip?style=social)
-![GitHub Issues](https://img.shields.io/github/issues/yourusername/codesnip)
-![GitHub License](https://img.shields.io/github/license/yourusername/codesnip)
-
 ---
-
-**Built with ❤️ by developers, for developers**
