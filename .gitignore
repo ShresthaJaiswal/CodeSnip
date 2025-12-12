@@ -1,0 +1,46 @@
+DEPLOYMENT_GUIDE.md
+IMPLEMENTATION_GUIDE.md
+PROJECT_COMPLETE.md
+QUICKSTART.md
+SETUP_AND_RUN.md
+setup.sh
+
+
+
+# ## 🎨 Screenshots
+
+# ### Dashboard
+# ![Dashboard](https://via.placeholder.com/800x500/4F46E5/ffffff?text=Dashboard+View)
+
+# ### Code Editor
+# ![Editor](https://via.placeholder.com/800x500/10B981/ffffff?text=Code+Editor)
+
+# ### Search & Filter
+# ![Search](https://via.placeholder.com/800x500/F59E0B/ffffff?text=Search+%26+Filter)
+
+# ## 🚢 Deployment Guide
+
+# ### Deploy Backend to Render
+
+# 1. Create account on [Render](https://render.com)
+# 2. Create new "Web Service"
+# 3. Connect your GitHub repository
+# 4. Configure:
+#    - Build Command: `cd backend && npm install && npx prisma generate`
+#    - Start Command: `cd backend && npm start`
+# 5. Add environment variables
+# 6. Deploy!
+
+# ### Deploy Frontend to Vercel
+
+# 1. Install Vercel CLI: `npm i -g vercel`
+# 2. From frontend folder: `vercel`
+# 3. Follow prompts
+# 4. Set environment variable: `REACT_APP_API_URL`
+
+# ### Database on Neon
+
+# 1. Create account on [Neon](https://neon.tech)
+# 2. Create new project
+# 3. Copy connection string
+# 4. Update `DATABASE_URL` in backend `.env`
